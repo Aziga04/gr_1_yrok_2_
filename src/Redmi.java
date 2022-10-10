@@ -1,4 +1,4 @@
-public class Redmi extends Telephone{
+public class Redmi extends Telephone implements Printable{
     private  boolean miAccount;
 
     public Redmi(String name, ClorEnum color, boolean miAccount) {
@@ -6,11 +6,8 @@ public class Redmi extends Telephone{
         this.miAccount = miAccount;
     }
 
-    public  void print() {
-        System.out.println("Redmi model" + getName() +
-                "\nColor:" + getColor() +
-                "\nmiAccount:" + miAccount );
+    @Override
+    public void print() {
+        System.out.println("Redmi" + miAccount);
     }
-
-
 }

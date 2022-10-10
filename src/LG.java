@@ -1,18 +1,14 @@
-public class LG extends Telephone {
+public class LG extends Telephone implements Printable {
 
-    private  int face_id;
+    private boolean face_id;
 
-    public LG(String name, ClorEnum color, int face_id) {
+    public LG(String name, ClorEnum color, boolean face_id) {
         super(name, color);
         this.face_id = face_id;
     }
 
-
     public  void print() {
-        System.out.println("LG model" + getName() +
-        "\nColor:" +getColor() +
-        "\nFace_id:" + face_id +
-                "\n------------------------");
+        System.out.println("LG model" + face_id);
 
     }
 }

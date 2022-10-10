@@ -1,21 +1,25 @@
-public  abstract class Telephone implements Printable{
-    private static String Name;
+public abstract   class Telephone implements Printable{
+    private  String Name;
     private  ClorEnum color;
 
+    public Telephone(ClorEnum color) {
+        this.color = color;
+    }
 
+    public Telephone(String name) {
+        Name = name;
+    }
 
     public Telephone(String name, ClorEnum color) {
         this.Name = name;
         this.color = color;
     }
-
-    public static String getName() {
-        return Name;
+    public String info(){
+        return Name+color;
     }
 
-    public  ClorEnum getColor() {
-        return color;
+    @Override
+    public void print() {
+
     }
-
-
 }

@@ -1,27 +1,28 @@
 public class Main {
     public static void main(String[] args) {
-       creatObject("Redmi");
-       creatObject("LG");
-       creatObject("Motorola");
-    }
-
-    public static String creatObject(String Telephone){
-        Redmi redmi = new Redmi("11 lite",ClorEnum.Black,true);
-        LG lg = new LG("W 11", ClorEnum.red,4);
-        Motorola motorola = new Motorola("E 30", ClorEnum.White, 68);
-        switch (Telephone){
-            case "Redmi":
-                Redmi.print();
-                break;
-            case "Lg":
-                lg.print();
-                break;
-            case  "Motorola":
-                Motorola.print();
-                break;
-            default:
+        Printable[] print={createObject("Redni"),createObject("lg"),createObject("Motorola")};
+        for (Printable printable:print) {
+            printable.print();
 
         }
-        return Telephone;
+
+    }
+
+    public static Printable createObject(String Smartphone){
+        switch (Smartphone){
+            case "Redni":
+                Redmi redmi = new Redmi("X",ClorEnum.Black,true);
+                return  redmi;
+            case "Samsung" :
+                LG lg = new LG("S21",ClorEnum.White,true);
+                return lg ;
+            case "<Motorola>":
+                Motorola motorola = new Motorola("Poco X3",ClorEnum.red,69);
+                return  motorola;
+        }
+
+        return null;
+
     }
 }
+
