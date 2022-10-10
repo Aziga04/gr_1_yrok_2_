@@ -8,8 +8,8 @@ public class Main {
 
     }
 
-    public static Printable createObject(String Smartphone){
-        switch (Smartphone){
+    public static Printable createObject(String Telephone){
+        switch (Telephone){
             case "Redni":
                 Redmi redmi = new Redmi("X",ClorEnum.Black,true);
                 return  redmi;
